@@ -3,6 +3,7 @@ import { Editor } from "react-draft-wysiwyg";
 import { convertToRaw, EditorState } from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import parse from "html-react-parser";
+import kuromoji from "kuromoji";
 
 import "./App.css";
 
@@ -32,7 +33,7 @@ function App() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
   useEffect(() => {
-    window.kuromoji
+    kuromoji
       .builder({
         dicPath: "https://unpkg.com/kuromoji@0.1.2/dict/",
       })
