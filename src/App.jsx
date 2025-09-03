@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     window.kuromoji
       .builder({
-        dicPath: "https://unpkg.com/kuromoji@0.1.2/dict/",
+        dicPath: `${import.meta.env.DIC_KUROMOJI}`,
       })
       .build((err, tokenizer) => {
         if (err) {
