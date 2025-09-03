@@ -7,9 +7,4 @@ export default defineConfig({
   define: {
     global: "window",
   },
-  resolve: {
-    alias: {
-      path: "path-browserify",
-    },
-  },
 });
