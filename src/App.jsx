@@ -34,7 +34,9 @@ function App() {
   useEffect(() => {
     window.kuromoji
       .builder({
-        dicPath: "https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict/",
+        dicPath: new URL(
+          "https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/dict/"
+        ).toString(),
       })
       .build((err, tokenizer) => {
         if (err) {
